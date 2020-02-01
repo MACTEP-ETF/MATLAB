@@ -21,11 +21,6 @@
 - **zeros(), ones()** – ģenerē nuļļu vai vieninieku matricas. iekavās jāieraksta rindu un kolonnu skaitu (*Piem., zeros(2,3)*).  
 - **size(A)** – parāda matricas izmēru (rindas, kolonnas).  
   - size(A,1) – parāda attiecīgo dimensiju.  
-- **%** – komentārs.  
-- **%** – komentārs.  
-- **%** – komentārs.  
-- **%** – komentārs.  
-- **%** – komentārs.  
 
 ### Gadijumskaitļi
 - **rand** – ģenerē gadijumskaitli intervālā \[0;1\].  
@@ -47,9 +42,16 @@
 
 
 ## Grafiki (plot)
+- **xlabel('laiks, s')**  
+- **ylabel('U, V')**
+  - ylabel('U^{max} {R1}, V') – attēlo <sup>max</sup> un <sub>R1</sub> pie **U** burta.  
+- **grid** – tīkliņš fonā.  
+- **legend('sīnus no t', 'cos no t')**  
+- **title('virsraksts')**  
+- **gtext('\leftarrow cos')** – ļauj uzlikt uz grafika papild tekstu brīvi izvēlētā vietā (ar kursora palīdzību). Ar sleš tiek apzīmēti *SpecSimboli*.  
+- **text(0.5, -0.5, 'kaut kas')** – uzliek uz grafika papild tekstu konkrētajā koordinātē.  
+- **figure** – atver logu grafiku zīmēšanai.  
+- **subplot(2,3,2)** – ļauj zīmēt vairākus grafikus (ne tikai līkni, bet pilnīgi visu) uz vienas darba virsmas.  
 
-
-
-BackUP
-
-- **%** – komentārs.  
+##### Sagataves
+- **X** – XXX.  
