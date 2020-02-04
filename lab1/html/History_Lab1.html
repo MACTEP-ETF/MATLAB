@@ -1,0 +1,266 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>History_Lab1</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-02-04"><meta name="DC.source" content="History_Lab1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">M&#275;r&#299;jumu datu apstr&#257;de</a></li><li><a href="#3">M&#275;r&#299;jumu s&#275;rijas</a></li><li><a href="#4">vid&#275;j&#257;s v&#275;rt&#299;bas atra&#353;ana</a></li><li><a href="#7">Datu ieg&#363;&#353;ana no sken&#275;t&#257;s bildes</a></li></ul></div><pre class="codeinput"><span class="comment">%-- 02/04/2020 02:30:09 PM --%</span>
+diary <span class="string">lab1.m</span>
+</pre><h2 id="2">M&#275;r&#299;jumu datu apstr&#257;de</h2><pre class="codeinput">format <span class="string">compact</span>
+Vm = [-1 0.3 1.5 2.5 3.2] <span class="comment">% Vair&#257;ki sprieguma m&#275;r&#299;jumi</span>
+Im = [1.1 2.2 2.1 3.2 4.7]*1e-3;
+plot(Vm, Im, <span class="string">"o-"</span>)
+<span class="comment">% aprakst&#299;sim tos datus ar 2. k&#257;rtas polinomju</span>
+<span class="comment">% y = C1*x^2+C2*x+C3</span>
+<span class="comment">% to koeficientus atrad&#299;s funkcija polyfit - polynomial fitting</span>
+<span class="comment">% sintakse</span>
+<span class="comment">% C = polyfit(x,y,N), kur N - polinoma k&#257;rta</span>
+C = polyfit(Vm,Im,2)
+<span class="comment">% y = 0.0002*x^2+0.0004*x+0.0015</span>
+<span class="comment">% soform&#275;sim vektoru "x" ar s&#299;k&#257;ku soli</span>
+V = -1:0.01:3.2;
+<span class="comment">% apr&#275;&#311;in&#257;sim "y"</span>
+I = C(1)*V.^2+C(2)*V+C(3); <span class="comment">% C(1) vektora "C" pirmais elements</span>
+plot(Vm,Im,<span class="string">"o"</span>,V,I)
+<span class="comment">% atk&#257;rtosim to pa&#353;u priek&#353; 3. k&#257;rtas polinoma</span>
+C = polyfit(Vm,Im,3)
+I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4);
+plot(Vm,Im,<span class="string">"o"</span>,V,I)
+<span class="comment">% v&#275;l reiz atk&#257;rtosim</span>
+C = polyfit(Vm,Im,3);
+<span class="comment">% lai nerakst&#299;tu &#353;o : I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4);</span>
+<span class="comment">% izmantosim f-ju polyval - polynomial value</span>
+<span class="comment">% sintakse</span>
+<span class="comment">% y = polyval(C,x)</span>
+I = polyval(C,V);
+plot(Vm,Im,<span class="string">"o"</span>,V,I)
+<span class="comment">% atk&#257;rtot 4. k&#257;rtai</span>
+C = polyfit(Vm,Im,4);
+I = polyval(C,V);
+plot(Vm,Im,<span class="string">"o"</span>,V,I)
+<span class="comment">% atk&#257;rtot 1. k&#257;rtai</span>
+C = polyfit(Vm,Im,1);
+I = polyval(C,V);
+plot(Vm,Im,<span class="string">"o"</span>,V,I)
+</pre><pre class="codeoutput">Vm =
+   -1.0000    0.3000    1.5000    2.5000    3.2000
+C =
+    0.0002    0.0004    0.0015
+C =
+    0.0002   -0.0004    0.0003    0.0021
+</pre><img vspace="5" hspace="5" src="History_Lab1_01.png" alt=""> <h2 id="3">M&#275;r&#299;jumu s&#275;rijas</h2><pre class="codeinput">Vm = [-1 0.3 1.5 2.5 3.2]; <span class="comment">% Vair&#257;ki sprieguma m&#275;r&#299;jumi</span>
+Im = [1.1 2.2 2.1 3.2 4.7
+0.9 1.8 2.6 3.3 4.5
+1.0 2.0 2.4 3.4 4.3
+0.8 1.9 2.5 3.5 4.6
+0.9 2.0 2.3 3.1 4.4];
+figure
+plot(Vm,Im,<span class="string">"o-"</span>)
+plot(Vm,Im',<span class="string">"o-"</span>)
+</pre><img vspace="5" hspace="5" src="History_Lab1_02.png" alt=""> <h2 id="4">vid&#275;j&#257;s v&#275;rt&#299;bas atra&#353;ana</h2><pre class="codeinput">sum([1 2 3 4 5])
+sum([1 2; 3 4])
+<span class="comment">% summ&#275; matricu pa kolonn&#257;m!</span>
+Ivid = mean(Im); <span class="comment">% Rezult&#257;ts b&#363;s tas pats</span>
+Ivid = sum(Im)/5
+Ivid = mean(Im)
+</pre><pre class="codeoutput">ans =
+    15
+ans =
+     4     6
+Ivid =
+    0.9400    1.9800    2.3800    3.3000    4.5000
+Ivid =
+    0.9400    1.9800    2.3800    3.3000    4.5000
+</pre><p>vid&#275;jais v&#275;rt&#299;bai pielaikosim polinomam</p><pre class="codeinput">C = polyfit(Vm,Ivid,4);
+V = -1:0.01:3.2;
+I = polyval(C,V);
+<span class="comment">% uzz&#299;m&#275;t 3 grafikus vien&#257;s as&#299;s</span>
+<span class="comment">% Vm, Im ar 'o'</span>
+<span class="comment">% Vm, Ivid ar '*'</span>
+<span class="comment">% V, I ar '-'</span>
+plot(Vm, Im', <span class="string">'o'</span>, Vm, Ivid, <span class="string">'*'</span>, V, I, <span class="string">'-'</span>)
+</pre><img vspace="5" hspace="5" src="History_Lab1_03.png" alt=""> <p>apr&#275;&#311;in&#257;sim standartnovirzi</p><pre class="codeinput">Istd = std(Im)
+errorbar(Vm,Ivid,Istd)
+<span class="comment">% m&#275;&#291;in&#257;sim tikt va&#316;&#257; no lauzt&#257;s l&#299;nijas</span>
+errorbar(Vm,Ivid,Istd, <span class="string">"."</span>)
+hold <span class="string">on</span>
+plot(V,I)
+hold <span class="string">off</span>
+</pre><pre class="codeoutput">Istd =
+    0.1140    0.1483    0.1924    0.1581    0.1581
+</pre><img vspace="5" hspace="5" src="History_Lab1_04.png" alt=""> <h2 id="7">Datu ieg&#363;&#353;ana no sken&#275;t&#257;s bildes</h2><pre class="codeinput">A = imread(<span class="string">'bilde1.png'</span>);
+B = imread(<span class="string">'bilde2.png'</span>);
+figure(1),image(A)
+figure(2),image(B)
+<span class="comment">% x main&#257;s no 500 - 800</span>
+<span class="comment">% y main&#257;s no 0 - 1</span>
+figure(2),image([500,800],[0,1],B)
+figure(2),image([500,800],[1,0],B)
+set(gca,<span class="string">'YDir'</span>, <span class="string">'normal'</span>)
+[x,y] = ginput(1)
+[x,y] = ginput(10);
+hold <span class="string">on</span>
+plot(x,y,<span class="string">'o'</span>)
+hold <span class="string">off</span>
+diary <span class="string">off</span>
+</pre><pre class="codeoutput">x =
+  579.6922
+y =
+    0.0893
+</pre><img vspace="5" hspace="5" src="History_Lab1_05.png" alt=""> <img vspace="5" hspace="5" src="History_Lab1_06.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASH 02/04/2020 02:30:09 PM REPLACE_WITH_DASH_DASH%
+diary lab1.m
+%% Mērījumu datu apstrāde
+format compact
+Vm = [-1 0.3 1.5 2.5 3.2] % Vairāki sprieguma mērījumi
+Im = [1.1 2.2 2.1 3.2 4.7]*1e-3;
+plot(Vm, Im, "o-")
+% aprakstīsim tos datus ar 2. kārtas polinomju
+% y = C1*x^2+C2*x+C3
+% to koeficientus atradīs funkcija polyfit - polynomial fitting
+% sintakse
+% C = polyfit(x,y,N), kur N - polinoma kārta
+C = polyfit(Vm,Im,2)
+% y = 0.0002*x^2+0.0004*x+0.0015
+% soformēsim vektoru "x" ar sīkāku soli
+V = -1:0.01:3.2;
+% aprēķināsim "y"
+I = C(1)*V.^2+C(2)*V+C(3); % C(1) vektora "C" pirmais elements
+plot(Vm,Im,"o",V,I)
+% atkārtosim to pašu priekš 3. kārtas polinoma
+C = polyfit(Vm,Im,3)
+I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4);
+plot(Vm,Im,"o",V,I)
+% vēl reiz atkārtosim
+C = polyfit(Vm,Im,3);
+% lai nerakstītu šo : I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4);
+% izmantosim f-ju polyval - polynomial value
+% sintakse
+% y = polyval(C,x)
+I = polyval(C,V);
+plot(Vm,Im,"o",V,I)
+% atkārtot 4. kārtai
+C = polyfit(Vm,Im,4);
+I = polyval(C,V);
+plot(Vm,Im,"o",V,I)
+% atkārtot 1. kārtai
+C = polyfit(Vm,Im,1);
+I = polyval(C,V);
+plot(Vm,Im,"o",V,I)
+%% Mērījumu sērijas
+Vm = [-1 0.3 1.5 2.5 3.2]; % Vairāki sprieguma mērījumi
+Im = [1.1 2.2 2.1 3.2 4.7
+0.9 1.8 2.6 3.3 4.5
+1.0 2.0 2.4 3.4 4.3
+0.8 1.9 2.5 3.5 4.6
+0.9 2.0 2.3 3.1 4.4];
+figure
+plot(Vm,Im,"o-")
+plot(Vm,Im',"o-")
+%% vidējās vērtības atrašana
+sum([1 2 3 4 5])
+sum([1 2; 3 4])
+% summē matricu pa kolonnām!
+Ivid = mean(Im); % Rezultāts būs tas pats
+Ivid = sum(Im)/5
+Ivid = mean(Im)
+%%
+% vidējais vērtībai pielaikosim polinomam
+C = polyfit(Vm,Ivid,4);
+V = -1:0.01:3.2;
+I = polyval(C,V);
+% uzzīmēt 3 grafikus vienās asīs
+% Vm, Im ar 'o'
+% Vm, Ivid ar '*'
+% V, I ar '-'
+plot(Vm, Im', 'o', Vm, Ivid, '*', V, I, '-')
+%%
+% aprēķināsim standartnovirzi
+Istd = std(Im)
+errorbar(Vm,Ivid,Istd)
+% mēģināsim tikt vaļā no lauztās līnijas
+errorbar(Vm,Ivid,Istd, ".")
+hold on
+plot(V,I)
+hold off
+%% Datu iegūšana no skenētās bildes
+A = imread('bilde1.png');
+B = imread('bilde2.png');
+figure(1),image(A)
+figure(2),image(B)
+% x mainās no 500 - 800
+% y mainās no 0 - 1
+figure(2),image([500,800],[0,1],B)
+figure(2),image([500,800],[1,0],B)
+set(gca,'YDir', 'normal')
+[x,y] = ginput(1)
+[x,y] = ginput(10);
+hold on
+plot(x,y,'o')
+hold off
+diary off
+##### SOURCE END #####
+--></body></html>
