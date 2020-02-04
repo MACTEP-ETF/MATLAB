@@ -35,7 +35,7 @@
 
 ## Oprerācijas ar matricām
 - **.\*** – Adamara reizinājums. Reizina elementus tāpat kā saskaitīšanas operācija. Piem., C=A.\*B -> a<sub>1</sub>\*b<sub>1</sub>=c<sub>1</sub> un tā tālāk.  
-- **Matricas pieraksts** – C = \[ 1 2; 3 4\], kur ar **atstarpi/komatu** mēs atdalam elementus un ar **;** rindas.
+- **Matricas pieraksts** – C = \[1 2; 3 4\], kur ar **atstarpi/komatu** mēs atdalam elementus un ar **;** rindas.
 - **Vektora ģenerēšana** – x = 0:0.2:1 - kas nozīmē: x = sākuma elements:solis:beigu_elements. Tādā veidā ģenerējas vektors ar 6 vērtībām. Ir iespējams ģenerēt arī ar funkcijas palīdzību! Skat. *linspace* aprakstu.    
 - **'** – ar apostrofu dotā matrica tiek transponēta (Pieraksts: y=\[1,2;3,4\]').  
 - **.'** – transponēšana kompleksiem skaitļiem.  
