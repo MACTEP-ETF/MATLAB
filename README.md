@@ -15,9 +15,12 @@
 - **format short** – atgriež attēlojumu uz nokluseto, respektīvi uz 4 zīmēm aiz komata.  
 - **format compact** – attēlos peldošā komata vērtību ar **e** palīdzību (*Piem., 1,03e-3*).  
 - **exp()** – eilera konstance. Cipars iekavās norādīs uz eilera pakāpi (*Piem., exp(2) = e<sup>2</sup>*).  
+- **C = polyfit(x,y,N)** – kur x ‒ "x" ass vērtība, y ‒ "y" ass vērtība, N ‒ polinoma kārta.  
+- **I = polyval(C,V)** ‒ lai nerakstītu šo: I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4).  
+
 
 ### Matricas
-- **linspase()** – t = linspace(0,2,6), kur **0** - sākuma elements; **2** - beigu elements; **6** - elementu skaits.
+- **linspace()** – t = linspace(0,2,6), kur **0** - sākuma elements; **2** - beigu elements; **6** - elementu skaits.
 - **zeros(), ones()** – ģenerē nuļļu vai vieninieku matricas. iekavās jāieraksta rindu un kolonnu skaitu (*Piem., zeros(2,3)*).  
 - **size(A)** – parāda matricas izmēru (rindas, kolonnas).  
   - size(A,1) – parāda attiecīgo dimensiju.  
@@ -39,7 +42,12 @@
 - **Vektora ģenerēšana** – x = 0:0.2:1 - kas nozīmē: x = sākuma elements:solis:beigu_elements. Tādā veidā ģenerējas vektors ar 6 vērtībām. Ir iespējams ģenerēt arī ar funkcijas palīdzību! Skat. *linspace* aprakstu.    
 - **'** – ar apostrofu dotā matrica tiek transponēta (Pieraksts: y=\[1,2;3,4\]').  
 - **.'** – transponēšana kompleksiem skaitļiem.  
-
+- **A (:,:) = 1** – kols nozīmē, ka matricas visām rindām un kolonnām tiks piešķirtas vērtība **1**.  
+- **A (:,:,:) = 1** – šī ir 3D matrica, kurai trešais elements ir matricas, piem. RGB attēls:  
+  - A (:,:,1) = R;  
+  - A (:,:,2) = G;  
+  - A (:,:,3) = B;  
+- **A (:,:,:,:) = 1** – šī ir 4D matrica, kurai ceturto elementu var uzskatīt kā kadru. Tādejādi katrā kadrā ierakstīt 3D matricu.  
 
 ## Grafiki (plot)
 - **xlabel('laiks, s')**  
