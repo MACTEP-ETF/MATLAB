@@ -17,6 +17,16 @@
 - **exp()** – eilera konstance. Cipars iekavās norādīs uz eilera pakāpi (*Piem., exp(2) = e<sup>2</sup>*).  
 - **C = polyfit(x,y,N)** – kur x ‒ "x" ass vērtība, y ‒ "y" ass vērtība, N ‒ polinoma kārta.  
 - **I = polyval(C,V)** ‒ lai nerakstītu šo: I = C(1)*V.^3+C(2)*V.^2+C(3)*V+C(4).  
+- **fprintf** – tas pats kā *printf* C valodā, visas komandas tādas pašas.  
+- **doc "funkcija"** – parāda dokumentāciju konkrētai funkcijai. 
+- **num2str(pi)** ‒ pārveido *char* klasi uz *double*. (*Pārveido par skaitli matemātiskās konstances.*)  
+- **str2num(3.14)** – pārveido *double* klasi uz *char*.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+
 
 
 ### Matricas
