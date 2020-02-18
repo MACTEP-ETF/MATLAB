@@ -39,6 +39,30 @@
 - **X** – XXX.  
 
 
+## Simboliskā matemātika
+- **syms** – simbolisko mainīgo definēšana ar matricas palīdzibu (*Piem., syms a11 a12 a21 a22*).  
+- **sym** – simbolisko mainīgo definēšana.  
+  - **A = sym('a',\[3 4\])** ‒ ģenerē matricu.  
+- **dif()** – atvasinājums.  
+- **int()** – nenoteiktais inegrālis.  
+  - **int(x^2,x,-3,3)** ‒3. un 4. mainīgais ir noteiktā integrāļa robežas.  
+- **limit(1/(x-1),x,1,'left')** – formula, x, uz kurieni tiecas, no kuras puses.  
+- **solve()** – vienādojuma risināšana.  
+  atb = solve(x+y+z==21,x+y-z==1,x-y+z==9)  
+  struct with fields:
+    x: \[1×1 sym\]  
+    y: \[1×1 sym\]  
+    z: \[1×1 sym\] 
+- **expand()** – atver iekavas vienādojumam.  
+- **simplify()** – vienkāršo izteiksmi.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+
+
 
 ### Matricas
 - **linspace()** – t = linspace(0,2,6), kur **0** - sākuma elements; **2** - beigu elements; **6** - elementu skaits.
