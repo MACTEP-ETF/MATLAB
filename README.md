@@ -21,7 +21,18 @@
 - **doc "funkcija"** – parāda dokumentāciju konkrētai funkcijai. 
 - **num2str(pi)** ‒ pārveido *char* klasi uz *double*. (*Pārveido par skaitli matemātiskās konstances.*)  
 - **str2num(3.14)** – pārveido *double* klasi uz *char*.  
+- **\[ \]** – iespēja izvadīt uz ekrāna neizmantojot "fprintf" funkciju.  
 - **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+- **X** – XXX.  
+
+
+## Datu struktūras (Data Structures)
+- **students.vards = 'Monu';** – izveido datu struktūru **students** ar apakšmainīgo *vards*.  
+  - **students.uzvards = 'Monu';** ‒ apakšmainīgais *uzvards*.   
+  - **students.vecums = 20;** ‒ apakšmainīgais *vecums*. 
+- **students(2).vards = 'Jānis';** – definējam otru apakšgrupu ar tiem pašiem apakšmainīgiem kā pamatgrupai *students*.  
 - **X** – XXX.  
 - **X** – XXX.  
 - **X** – XXX.  
