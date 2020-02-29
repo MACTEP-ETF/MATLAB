@@ -43,7 +43,7 @@
 - **syms** – simbolisko mainīgo definēšana ar matricas palīdzibu (*Piem., syms a11 a12 a21 a22*).  
 - **sym** – simbolisko mainīgo definēšana.  
   - **A = sym('a',\[3 4\])** ‒ ģenerē matricu.  
-- **diff()** – atvasinājums.(*diff(funkcija, pēc kā atvasināt, cik reizes atvasināt)*)  
+- **diff(x^2,x,2)** – aprēķina atvasinājumu. Funkcija | pēc kā atvasināt | cik reizes.    
 - **int()** – nenoteiktais inegrālis.  
   - **int(x^2,x,-3,3)** ‒3. un 4. mainīgais ir noteiktā integrāļa robežas.  
 - **limit(1/(x-1),x,1,'left')** – formula, x, uz kurieni tiecas, no kuras puses.  
