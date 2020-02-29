@@ -45,7 +45,7 @@
   - **A = sym('a',\[3 4\])** ‒ ģenerē matricu.  
 - **diff(x^2,x,2)** – aprēķina atvasinājumu. Funkcija | pēc kā atvasināt | cik reizes.    
 - **int()** – nenoteiktais inegrālis.  
-  - **int(x^2,x,-3,3)** ‒3. un 4. mainīgais ir noteiktā integrāļa robežas.  
+  - **int(x^2,x,-3,3)** ‒ 3. un 4. mainīgais ir noteiktā integrāļa robežas.  
 - **limit(1/(x-1),x,1,'left')** – formula, x, uz kurieni tiecas, no kuras puses.  
 - **solve()** – vienādojuma risināšana.  
   atb = solve(x+y+z==21,x+y-z==1,x-y+z==9)  
