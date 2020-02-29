@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Ievads simboliskaj&#257; matem&#257;tik&#257;</title><meta name="generator" content="MATLAB 9.7"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-02-29"><meta name="DC.source" content="labdarbs2_atskaitei.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Ievads simboliskaj&#257; matem&#257;tik&#257;</h1><!--introduction--><p>M&#275;r&#311;is: iepaz&#299;ties ar MatLab simbolisko matem&#257;tiku</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">1. uzdevums</a></li><li><a href="#3">2. uzdevums</a></li><li><a href="#9">Secin&#257;jums</a></li></ul></div><h2 id="1">1. uzdevums</h2><p>Atrisin&#257;t vien&#257;dojumu un smuki att&#275;lot rezult&#257;tu</p><pre class="codeinput">syms <span class="string">x</span>
+z = solve(((log(x/2))/(x^2+1))-1)
+pretty(z)
+zLatex = latex(simplify(z));
+strZ = [<span class="string">'$'</span>,zLatex,<span class="string">'$'</span>];
+</pre><pre class="codeoutput"> 
+z =
+ 
+ (-wrightOmega(log(8) - pi*1i + 2)/2)^(1/2)
+ (-wrightOmega(log(8) + 2 + pi*1i)/2)^(1/2)
+ 
+/     /   wrightOmega(log(8) - pi 1i + 2) \ \
+| sqrt| - ------------------------------- | |
+|     \                  2                / |
+|                                           |
+|     /   wrightOmega(log(8) + 2 + pi 1i) \ |
+| sqrt| - ------------------------------- | |
+\     \                  2                / /
+
+</pre><p>Att&#275;lo&#353;u 1. uzdevuma risin&#257;jumu mums pierast&#257; rakst&#257;:</p><pre class="codeinput">text(0,0.5,strZ,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>,<span class="string">'FontSize'</span>,32)
+</pre><img vspace="5" hspace="5" src="labdarbs2_atskaitei_01.png" alt=""> <h2 id="3">2. uzdevums</h2><p>Nointegr&#275;t funkciju un uzz&#299;m&#275;t grafiku</p><pre class="codeinput">syms <span class="string">x</span>
+y = (a^sqrt(x)*log(a))/(2*sqrt(x));
+yInt = int(y);
+</pre><p>Uzz&#299;m&#275;sim 2. uzdevuma grafiku izmantojot uzdevum&#257; doto 'x' v&#275;rt&#299;bu diapazonu</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">a</span>
+y = (a^sqrt(x)*log(a))/(2*sqrt(x)); <span class="comment">% pati funkcija</span>
+x = [0.1:0.01:10];
+</pre><p>T&#257; k&#257; 'a' v&#275;rt&#299;ba nav zin&#257;ma, tad es pie&#326;em&#353;u, ka 'a' = 5</p><pre class="codeinput">a = 5;
+</pre><p>veiksim funkcijas vektoriz&#257;ciju</p><pre class="codeinput">yVek = vectorize(y)
+yVekInt = vectorize(int(y))
+</pre><pre class="codeoutput">
+yVek =
+
+    '(a.^(x.^(1./2)).*log(a))./(2.*x.^(1./2))'
+
+
+yVekInt =
+
+    'a.^(x.^(1./2))'
+
+</pre><p>tad ievietosim x v&#275;rt&#299;bu</p><pre class="codeinput">yRez = eval(yVek);
+yRezInt = eval(yVekInt);
+</pre><p>Z&#299;m&#275;sim abus rezult&#257;tus. Gan pa&#353;u funkciju, gan t&#257;s integr&#257;li</p><pre class="codeinput">plot(x,yRez,x,yRezInt,<span class="string">'linewidth'</span>,3)
+yLatex = latex(y);
+yLatexInt = latex(int(y));
+title(<span class="string">'Funkcijas grafiks'</span>)
+h = legend([<span class="string">'$'</span>,yLatex,<span class="string">'$'</span>],[<span class="string">'$'</span>,yLatexInt,<span class="string">'$'</span>]);
+set (h,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>,<span class="string">'FontSize'</span>,20);
+legend(<span class="string">'Location'</span>,<span class="string">'northeastoutside'</span>);
+text(0.2,175,<span class="string">'pie&#326;&#275;mu, ka a=5'</span>);
+</pre><img vspace="5" hspace="5" src="labdarbs2_atskaitei_02.png" alt=""> <h2 id="9">Secin&#257;jums</h2><p>Iesp&#275;jams, esmu nekorekti uzz&#299;m&#275;jis 2. uzdevuma grafiku, jo nebiju mekl&#275;jis "a" v&#275;rt&#299;bu, bet gan patva&#316;&#299;gi ieliku skaitli. Ar rezult&#257;tu esmu apmierin&#257;ts! Tiesa, bija nedaudz j&#257;pa&#269;akar&#275;jas, jo &#353;ur tur sakum&#257; biju sajaucis apa&#316;&#257;s iekavas ar kvadr&#257;t iekav&#257;m un k&#257;du laiku "sitos", kam&#275;r sapratu savu neuzman&#299;bas k&#316;&#363;du.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Ievads simboliskajā matemātikā
+% Mērķis: iepazīties ar MatLab simbolisko matemātiku
+%% 1. uzdevums
+% Atrisināt vienādojumu un smuki attēlot rezultātu
+syms x
+z = solve(((log(x/2))/(x^2+1))-1)
+pretty(z)
+zLatex = latex(simplify(z));
+strZ = ['$',zLatex,'$'];
+%%
+% Attēlošu 1. uzdevuma risinājumu mums pierastā rakstā:
+text(0,0.5,strZ,'Interpreter','Latex','FontSize',32)
+
+%% 2. uzdevums
+% Nointegrēt funkciju un uzzīmēt grafiku
+syms x
+y = (a^sqrt(x)*log(a))/(2*sqrt(x)); 
+yInt = int(y); 
+
+%%
+% Uzzīmēsim 2. uzdevuma grafiku izmantojot uzdevumā doto 'x' vērtību diapazonu
+syms x a
+y = (a^sqrt(x)*log(a))/(2*sqrt(x)); % pati funkcija
+x = [0.1:0.01:10];
+%%
+% Tā kā 'a' vērtība nav zināma, tad es pieņemšu, ka 'a' = 5
+a = 5;
+%%
+% veiksim funkcijas vektorizāciju
+yVek = vectorize(y)
+yVekInt = vectorize(int(y))
+%%
+% tad ievietosim x vērtību
+yRez = eval(yVek);
+yRezInt = eval(yVekInt);
+%%
+% Zīmēsim abus rezultātus. Gan pašu funkciju, gan tās integrāli
+plot(x,yRez,x,yRezInt,'linewidth',3)
+yLatex = latex(y); 
+yLatexInt = latex(int(y));
+title('Funkcijas grafiks')
+h = legend(['$',yLatex,'$'],['$',yLatexInt,'$']);
+set (h,'Interpreter','Latex','FontSize',20);
+legend('Location','northeastoutside');
+text(0.2,175,'pieņēmu, ka a=5');
+
+%% Secinājums
+% Iespējams, esmu nekorekti uzzīmējis 2. uzdevuma grafiku, jo nebiju
+% meklējis "a" vērtību, bet gan patvaļīgi ieliku skaitli.
+% Ar rezultātu esmu apmierināts! Tiesa, bija nedaudz jāpačakarējas, jo šur
+% tur sakumā biju sajaucis apaļās iekavas ar kvadrāt iekavām un kādu laiku
+% "sitos", kamēr sapratu savu neuzmanības kļūdu.
+##### SOURCE END #####
+--></body></html>
