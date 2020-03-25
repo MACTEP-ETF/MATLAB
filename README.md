@@ -1,4 +1,5 @@
 # MATLAB
+Tuvākajā laikā izskatīšu un ievietošu visu lekciju un laboru strukturētā aprakstā + ar satura rādītāju :)  
 ## Vispārīgi
 - Masīvs sākas ar indeksu **1** nevis ar **0**, kā C valodā.  
 - **Vektors** – masīvs kas sastāv tikai no vienas rindas/kolonnas.  
